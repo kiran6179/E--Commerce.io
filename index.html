@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickMart — shop Ariel detergent and everyday grocery essentials.">
+  <title>QuickMart | Shop Smart. Live Better.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">🚚 Free delivery on orders over ₹999!</div>
+  <header class="header">
+    <div class="container header-main">
+      <a class="logo" href="#home" aria-label="QuickMart home">
+        <span class="logo-icon" aria-hidden="true">🛒</span>
+        <span><strong>Quick<span>Mart</span></strong><small>Shop Smart. Live Better.</small></span>
+      </a>
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="search-input">Search products</label>
+        <input id="search-input" type="search" placeholder="Search Ariel, rice, snacks..." autocomplete="off">
+        <button aria-label="Search products" type="submit">⌕</button>
+      </form>
+      <div class="header-actions">
+        <a href="#contact" class="header-action"><span aria-hidden="true">♙</span><small>Account</small></a>
+        <button class="header-action cart-button" id="cart-button" type="button" aria-label="View cart"><span aria-hidden="true">🛒</span><small>Cart <b id="cart-count">0</b></small></button>
+      </div>
+    </div>
+    <nav class="nav-bar" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <button class="category-menu" id="category-menu" type="button" aria-expanded="false" aria-controls="category-links">☰ <span>All Categories</span>⌄</button>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="main-links" aria-label="Open navigation">☰</button>
+        <div class="nav-links" id="main-links">
+          <a href="#home">Home</a><a href="#ariel">Ariel</a><a href="#groceries">Groceries</a><a href="#offers">Offers</a><a href="#about">About</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="container category-links" id="category-links" hidden>
+        <a href="#ariel">Laundry &amp; Cleaning</a><a href="#groceries">Rice &amp; Staples</a><a href="#groceries">Snacks</a><a href="#groceries">Beverages</a><a href="#groceries">Fresh Produce</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container" id="ariel">
+      <div class="hero-copy">
+        <p class="eyebrow">EVERYDAY ESSENTIALS · GREAT VALUE</p>
+        <h1>Powerful clean.<br><span>Brighter days.</span></h1>
+        <p>Discover Ariel laundry care and everyday favourites for your home — all in one convenient place.</p>
+        <div class="hero-badges"><span>✓ Everyday essentials</span><span>✓ Great value prices</span></div>
+        <a class="button button-yellow" href="#products">Shop products <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-product" aria-label="Ariel detergent promotion">
+        <div class="sparkle sparkle-one">✦</div><div class="sparkle sparkle-two">✧</div>
+        <div class="detergent-pack hero-pack">
+          <div class="pack-top"></div><div class="pack-brand">ARIEL</div><div class="pack-wave"></div><div class="pack-type">FAST DISSOLVE</div><div class="pack-weight">WASHING POWDER</div>
+        </div>
+        <div class="offer-bubble">UP TO<br><strong>20% OFF</strong></div>
+        <div class="hero-product-caption">Ariel Washing Powder <span>Freshness you can feel</span></div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true"></div>
+    </section>
+
+    <section class="container categories-section" aria-labelledby="categories-title">
+      <div class="section-title"><div><p class="eyebrow">SHOP YOUR WAY</p><h2 id="categories-title">Shop by category</h2></div><a class="view-link" href="#products">View all →</a></div>
+      <div class="category-grid">
+        <a class="category-card ariel-category" href="#ariel"><span class="category-art mini-ariel">ARIEL</span><strong>Laundry care</strong><small>Clean clothes, every day</small></a>
+        <a class="category-card" href="#groceries"><span class="category-art produce">🥦🍅</span><strong>Fresh produce</strong><small>Everyday freshness</small></a>
+        <a class="category-card" href="#groceries"><span class="category-art staples">🍚</span><strong>Rice &amp; staples</strong><small>Pantry essentials</small></a>
+        <a class="category-card" href="#groceries"><span class="category-art snacks">🍟</span><strong>Snacks</strong><small>Little treats</small></a>
+        <a class="category-card" href="#groceries"><span class="category-art drinks">🥤</span><strong>Beverages</strong><small>Refresh and recharge</small></a>
+        <a class="category-card" href="#groceries"><span class="category-art household">🧴</span><strong>Home essentials</strong><small>For every room</small></a>
+      </div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-title"><div><p class="eyebrow">PICKS FOR YOUR HOME</p><h2>Featured products</h2></div><div class="product-tools"><span id="results-count">6 products</span><select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></div></div>
+        <div class="product-grid" id="product-grid">
+          <article class="product-card" data-name="Ariel Washing Powder" data-category="ariel" data-price="299">
+            <span class="product-label offer-label">BESTSELLER</span><button class="wishlist" type="button" aria-label="Add Ariel Washing Powder to wishlist" aria-pressed="false">♡</button>
+            <div class="product-image product-ariel"><div class="detergent-pack"><div class="pack-top"></div><div class="pack-brand">ARIEL</div><div class="pack-wave"></div><div class="pack-type">FAST DISSOLVE</div><div class="pack-weight">WASHING POWDER</div></div></div>
+            <div class="product-info"><p class="product-category">LAUNDRY CARE</p><h3>Ariel Washing Powder</h3><p class="product-size">1 kg pack</p><div class="price-row"><strong>₹299</strong><del>₹349</del><span class="discount">14% off</span></div><p class="rating"><span>★★★★★</span> <small>(128 reviews)</small></p><button class="add-button" type="button" data-product="Ariel Washing Powder" data-price="299">＋ Add to Cart</button></div>
+          </article>
+          <article class="product-card" data-name="India Gate Basmati Rice" data-category="groceries" data-price="699">
+            <button class="wishlist" type="button" aria-label="Add Basmati Rice to wishlist" aria-pressed="false">♡</button>
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80" alt="Basmati rice grains in a bowl" loading="lazy"></div>
+            <div class="product-info"><p class="product-category">RICE &amp; STAPLES</p><h3>Basmati Rice</h3><p class="product-size">5 kg bag</p><div class="price-row"><strong>₹699</strong><del>₹799</del><span class="discount">12% off</span></div><p class="rating"><span>★★★★★</span> <small>(94 reviews)</small></p><button class="add-button" type="button" data-product="Basmati Rice" data-price="699">＋ Add to Cart</button></div>
+          </article>
+          <article class="product-card" data-name="Lay's Classic Chips" data-category="groceries" data-price="20">
+            <span class="product-label">POPULAR</span><button class="wishlist" type="button" aria-label="Add Classic Chips to wishlist" aria-pressed="false">♡</button>
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80" alt="Crispy potato chips in a bowl" loading="lazy"></div>
+            <div class="product-info"><p class="product-category">SNACKS</p><h3>Classic Potato Chips</h3><p class="product-size">52 g pack</p><div class="price-row"><strong>₹20</strong><del>₹30</del><span class="discount">33% off</span></div><p class="rating"><span>★★★★★</span> <small>(76 reviews)</small></p><button class="add-button" type="button" data-product="Classic Potato Chips" data-price="20">＋ Add to Cart</button></div>
+          </article>
+          <article class="product-card" data-name="Orange Juice" data-category="groceries" data-price="150">
+            <button class="wishlist" type="button" aria-label="Add Orange Juice to wishlist" aria-pressed="false">♡</button>
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80" alt="Fresh orange juice in a glass" loading="lazy"></div>
+            <div class="product-info"><p class="product-category">BEVERAGES</p><h3>Orange Juice</h3><p class="product-size">1 litre pack</p><div class="price-row"><strong>₹150</strong><del>₹180</del><span class="discount">17% off</span></div><p class="rating"><span>★★★★★</span> <small>(61 reviews)</small></p><button class="add-button" type="button" data-product="Orange Juice" data-price="150">＋ Add to Cart</button></div>
+          </article>
+          <article class="product-card" data-name="Fresh Bananas" data-category="groceries" data-price="60">
+            <button class="wishlist" type="button" aria-label="Add Fresh Bananas to wishlist" aria-pressed="false">♡</button>
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=600&q=80" alt="Fresh ripe bananas" loading="lazy"></div>
+            <div class="product-info"><p class="product-category">FRESH PRODUCE</p><h3>Fresh Bananas</h3><p class="product-size">Approx. 1 dozen</p><div class="price-row"><strong>₹60</strong><del>₹75</del><span class="discount">20% off</span></div><p class="rating"><span>★★★★★</span> <small>(53 reviews)</small></p><button class="add-button" type="button" data-product="Fresh Bananas" data-price="60">＋ Add to Cart</button></div>
+          </article>
+          <article class="product-card" data-name="Whole Milk" data-category="groceries" data-price="68">
+            <button class="wishlist" type="button" aria-label="Add Whole Milk to wishlist" aria-pressed="false">♡</button>
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80" alt="Fresh milk in a glass" loading="lazy"></div>
+            <div class="product-info"><p class="product-category">DAIRY</p><h3>Whole Milk</h3><p class="product-size">1 litre pack</p><div class="price-row"><strong>₹68</strong><del>₹72</del><span class="discount">6% off</span></div><p class="rating"><span>★★★★★</span> <small>(82 reviews)</small></p><button class="add-button" type="button" data-product="Whole Milk" data-price="68">＋ Add to Cart</button></div>
+          </article>
+        </div>
+        <p class="no-results" id="no-results" hidden>No products match your search. Try another product name.</p>
+      </div>
+    </section>
+
+    <section class="offer-strip container" id="offers"><div class="offer-icon">%</div><div><p class="eyebrow">A LITTLE EXTRA VALUE</p><h2>Stock up and save.</h2><p>Explore offers on household essentials and grocery favourites.</p></div><a href="#products" class="button button-yellow">Explore offers →</a></section>
+
+    <section class="benefits">
+      <div class="container benefits-grid"><div><span>🚚</span><p><strong>Convenient delivery</strong><small>Delivered to your doorstep</small></p></div><div><span>🔒</span><p><strong>Secure checkout</strong><small>Your details matter</small></p></div><div><span>☎</span><p><strong>Customer support</strong><small>We're here to help</small></p></div><div><span>✓</span><p><strong>Everyday value</strong><small>Essentials made easy</small></p></div></div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="logo logo-light" href="#home"><span class="logo-icon">🛒</span><span><strong>Quick<span>Mart</span></strong><small>Shop Smart. Live Better.</small></span></a><p>Your everyday shopping, made simpler.</p></div>
+      <div><h3>Quick links</h3><a href="#home">Home</a><a href="#products">Shop products</a><a href="#offers">Offers</a><a href="#about">About us</a></div>
+      <div><h3>Customer care</h3><p>☎ +91 98765 43210</p><p>✉ support@quickmart.example</p><p>Mon–Sat · 9 AM–9 PM</p></div>
+      <div><h3>Stay connected</h3><p>Follow us for offers and updates.</p><div class="socials"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">◎</a><a href="#contact" aria-label="YouTube">▶</a></div></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> QuickMart. All rights reserved.</span><span>Demo ecommerce website · Prices are illustrative</span><a href="#home" class="back-top" aria-label="Back to top">↑</a></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+    <div class="cart-dialog-head"><h2 id="cart-title">Your cart</h2><button id="close-cart" type="button" aria-label="Close cart">✕</button></div>
+    <div id="cart-items" class="cart-items"><p>Your cart is empty. Add a product to get started.</p></div>
+    <div class="cart-total"><span>Subtotal</span><strong id="cart-total">₹0</strong></div>
+    <p class="cart-note">Demo cart only. Checkout and payment are not connected.</p>
+    <button class="button button-yellow checkout-button" id="demo-checkout" type="button">Continue shopping</button>
+  </dialog>
+</body>
+</html>
